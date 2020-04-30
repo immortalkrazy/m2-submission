@@ -10,9 +10,7 @@ function myKeyPress(e){
   // for testing purposes
   console.log("Length:  " + mytextbox.length);
 
-
-
-  // TODO: set the value of the textbox with the formatted value
+  // TODO: Add a condition to ignore entries beyond 10 digits
 
   var keyPressed;
   if(window.event) { // IE
@@ -31,7 +29,13 @@ function myKeyPress(e){
 
 
 
-  // TODO: Add a condition to ignore entries beyond 10 digits
+  
+  // TODO: set the value of the textbox with the formatted value
+  if (mytextbox.length < 11) {
+
+    document.getElementById('textinput').value = y;  
+    
+  }
 
 }
 
