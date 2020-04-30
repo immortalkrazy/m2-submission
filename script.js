@@ -35,14 +35,30 @@ function myKeyPress(e){
 
 }
 
-function formatPhoneNumber(value){
+function formatPhoneNumber(val){
 
   /* TODO:  Use replace function to ignore extra - character */
-
+    var value = strReplace(val);
+  
   if(value.length > 3 && value.length <= 6)
     value = value.slice(0,3) + "-" + value.slice(3);
   else if(value.length > 6)
     value = value.slice(0,3) + "-" + value.slice(3,6) + "-" + value.slice(6);
+  // for testing purposes
+  console.log("from Format: " + value);
 
   return value;
+}
+// Replace function
+function strReplace(val) {
+
+  var myStr = val;
+  // for testing purposes
+  console.log("from Replace before: " + myStr);
+  
+  var newStr = myStr.replace(/-/g, "");
+  // for testing purposes
+  console.log("from Replace after: " + newStr);
+
+  return newStr;
 }
