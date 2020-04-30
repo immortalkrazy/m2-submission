@@ -11,6 +11,13 @@ function myKeyPress(e){
   console.log("Length:  " + mytextbox.length);
 
   // TODO: Add a condition to ignore entries beyond 10 digits
+  if (mytextbox.length > 11) {
+    // alert message onto webpage
+    alert("Limit: 10 Digits");
+    // break function call
+    return false;
+  }
+
 
   var keyPressed;
   if(window.event) { // IE
