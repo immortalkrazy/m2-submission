@@ -3,7 +3,13 @@
 function myKeyPress(e){
 
   /* TODO: retrieve the value from the text input */
-  var mytextbox = "my textbox element";
+  var mytextbox = document.getElementById("textinput").value;
+  
+  // for testing purposes
+  console.log("Initial input: "+ mytextbox);
+  // for testing purposes
+  console.log("Length:  " + mytextbox.length);
+
 
 
   // TODO: set the value of the textbox with the formatted value
@@ -16,7 +22,8 @@ function myKeyPress(e){
   }
 
   var x = String.fromCharCode(keyPressed);
-  var y = formatPhoneNumber("7189515000");
+  /* change on part of 2nd commit */
+  var y = formatPhoneNumber(mytextbox);
 
 
   console.log("Key Pressed = " + x);
